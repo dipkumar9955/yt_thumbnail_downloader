@@ -2,30 +2,71 @@
 
 .container {
     display: flex;
-    flex-direction: column;
+ flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    border: 4px solid #8000ff;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 90px;
     font-family: Arial, sans-serif;
+    width: auto;
+  height: auto;
+  background-color: #dfdfdf;
+  transition:  box-shadow 0.3s ease-in-out;
+
+  /* Add a box shadow for the initial state (no glow) */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0);
   }
   
-  h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
+  .container:hover {
+    box-shadow: 0 0 30px rgb(193, 7, 255);
   }
-  
+
+h1 {
+  text-shadow: 2px 2px 4px rgba(206, 206, 206, 0.5);
+  font-size: 34px;
+  padding: 20px;
+  color: #8000ff;
+  text-align: center;
+  transition: font-size 0.3s ease-in 0.1s;
+}
+
+h1:hover {
+  font-size: 40px; 
+  color: rgb(255, 0, 102); 
+}
+h2{
+  padding: 20px;
+  color: #8000ff;
+  text-align: center;
+  transition: font-size 0.3s ease-in 0.1s;
+}
+h2:hover {
+  font-size: 40px; 
+  color: rgb(255, 0, 102);
+}
   input {
-    width: 100%;
-    padding: 10px;
+    width: 50%;
+    padding: 15px;
     font-size: 16px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #404040;
     border-radius: 5px;
     outline: none;
+    transition: ease-in 0.3s;
+
+  }
+  input:hover{
+    color: rgb(255, 0, 102); 
+    border:1px groove #ff0044;
+
   }
   
   button {
-    padding: 10px 20px;
-    background-color: #007bff;
+    margin-top: 25px;
+    padding: 15px 20px;
+    background-color: #8000ff;
+    width: 16%;
     color: white;
     border: none;
     border-radius: 5px;
@@ -35,7 +76,7 @@
   }
   
   button:hover {
-    background-color: #0056b3;
+    background-color: #ff007b;
   }
   
   .thumbnails {
@@ -55,20 +96,33 @@
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   }
-  
+  .thumbnail img{
+margin: 40px auto;
+align-items: center;
+border: 1px solid;
+border-radius: 20px;
+  }
+
+  .thumbnail img:hover{
+    box-shadow: 0 0 30px rgb(193, 7, 255);
+    transition: box-shadow 0.3s ease-in-out;
+
+  }
   .thumbnail a {
     display: block;
-    margin-top: 5px;
+    width: 30%;
+    margin:10px auto;
+   text-align: center;
     text-decoration: none;
-    background-color: #007bff;
+    background-color: #bb00ff;
     color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    font-size: 25px;
     transition: background-color 0.3s ease;
   }
   
   .thumbnail a:hover {
-    background-color: #0056b3;
+    background-color: #ff000d;
   }
   

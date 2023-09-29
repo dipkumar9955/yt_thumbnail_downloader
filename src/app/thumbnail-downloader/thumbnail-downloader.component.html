@@ -1,10 +1,11 @@
 <div class="container">
     <h1>YouTube Thumbnail Downloader</h1>
-    <input [(ngModel)]="videoUrl" placeholder="Enter YouTube Video URL">
+<input [(ngModel)]="videoUrl" placeholder="Enter YouTube Video URL" (input)="getThumbnails(videoUrl)">
     <button (click)="getThumbnails(videoUrl)">Get Thumbnails</button>
+
     
     <div *ngIf="thumbnails">
-      <h2>Thumbnails:</h2>
+      <h2>Thumbnails Preview:</h2>
       <div class="thumbnail" *ngFor="let thumbnail of thumbnails">
         <img [src]="thumbnail.url" alt="Thumbnail">
         <a [href]="thumbnail.url" download>Download</a>
